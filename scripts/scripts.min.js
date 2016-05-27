@@ -228,9 +228,10 @@
     });
 
     $('.navgoco li > a > span')
-      .keyup(function (e) {
+      .keydown(function (e) {
         if (e.which === 13 || e.which === 32) {
           $(this).click();
+          return false;
         }
       })
       .attr('title', function () {
