@@ -37,6 +37,14 @@
     });
   });
 
+  $(document).ready(function() {
+    $('.row-offcanvas').click(function(e){
+      if ($(this).is('.active')) {
+        $(this).removeClass('active');
+      }
+    });
+  });
+
   $(document).keyup(function (e) {
     // Bind key esc
     if (e.which === 27) {
