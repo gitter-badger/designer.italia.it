@@ -543,7 +543,7 @@ th {
   src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
   src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon, .scrollto_top span:before, .navgoco li > a > span:after, .navgoco li.open > a > span:after {
+.glyphicon, .scrollto_top span:before, .navmenu li > a > span:after, .navmenu li.open > a > span:after {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -6421,7 +6421,7 @@ p .badge {
   display: inline-block;
   margin-right: 24px;
   margin-right: 2.4rem; }
-  .badge-container .glyphicon, .badge-container .scrollto_top span:before, .scrollto_top .badge-container span:before, .badge-container .navgoco li > a > span:after, .navgoco .badge-container li > a > span:after, .badge-container.glyphicon, .scrollto_top span.badge-container:before, .navgoco li > a > span.badge-container:after {
+  .badge-container .glyphicon, .badge-container .scrollto_top span:before, .scrollto_top .badge-container span:before, .badge-container .navmenu li > a > span:after, .navmenu .badge-container li > a > span:after, .badge-container.glyphicon, .scrollto_top span.badge-container:before, .navmenu li > a > span.badge-container:after {
     font-size: 34px;
     font-size: 3.4rem; }
   .badge-container .badge {
@@ -6432,135 +6432,139 @@ p .badge {
     right: -1.2rem;
     z-index: 100; }
 
-.navgoco, .navgoco ul, .navgoco li {
+.navmenu, .navmenu ul, .navmenu li {
   padding: 0;
   list-style: none; }
 
-.navgoco ul {
+.navmenu ul {
+  display: none;
   padding: 0; }
 
-ul.navgoco {
+.navmenu li.active ul {
+  display: block; }
+
+ul.navmenu {
   margin-top: 40px;
   margin-top: 4rem; }
   @media (max-width: 767px) {
-    ul.navgoco {
+    ul.navmenu {
       margin-top: 0px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    ul.navgoco {
+    ul.navmenu {
       margin-top: 50px; } }
 
-.navgoco {
+.navmenu {
   margin: 0px; }
 
-.navgoco > li {
+.navmenu > li {
   border-bottom: 1px solid #e7e6e4; }
 
-.navgoco > li li {
+.navmenu > li li {
   border-bottom: 1px solid #e7e6e4; }
 
 .has-submenu > a {
   font-weight: 700; }
 
-.navgoco a {
+.navmenu a {
   color: #003e54;
   display: block;
   outline: none;
   text-decoration: none; }
 
-.navgoco li > a > span {
+.navmenu li > a > span {
   float: right;
   font-size: 1.23em;
   text-align: right;
   width: 35px;
-  display: inline-block; }
+  text-align: center;
+  display: inline-block;
+  margin-top: -3px;
+  margin-right: -3px; }
 
-.navgoco li > a:hover > span {
+.navmenu li > a:hover > span {
   color: #003e54; }
 
-.navgoco li > a > span:after {
+.navmenu li > a > span:after {
   line-height: 1;
   font-size: 1.23em;
   content: "\e259"; }
   @media (max-width: 767px) {
-    .navgoco li > a > span:after {
+    .navmenu li > a > span:after {
       font-size: 0.89em; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .navgoco li > a > span:after {
+    .navmenu li > a > span:after {
       font-size: 1em; } }
 
-.navgoco li.open > a > span:after {
+.navmenu li.open > a > span:after {
   line-height: 1;
   font-size: 1.23em;
   content: "\e260"; }
   @media (max-width: 767px) {
-    .navgoco li.open > a > span:after {
+    .navmenu li.open > a > span:after {
       font-size: 0.89em; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .navgoco li.open > a > span:after {
+    .navmenu li.open > a > span:after {
       font-size: 1em; } }
 
-.navgoco a:hover, .navgoco li.open.active > a, .navgoco li.open.active ul {
-  background-color: #cef1ff;
-  color: #003e54; }
+.navmenu > li.open ul {
+  background: #e2f7ff;
+  border-top: 1px solid #e7e6e4; }
+  .navmenu > li.open ul li a:hover {
+    background: #cef1ff; }
 
-.navgoco > li.open ul {
+.navmenu > li.open ul > li.open > a {
   background: #cef1ff; }
 
-.navgoco li.active ul li {
-  border-bottom: 1px solid #ffffff; }
+.navmenu [tabindex="0"]:focus {
+  outline: #ff8c00 solid 2px !important; }
 
-.navgoco > li.open.active > a {
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #ffffff; }
-
-.navgoco li a {
+.navmenu li a {
   font-size: 1em;
   line-height: 18px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 1em;
   padding-right: 1em; }
-  .navgoco li a.active {
+  .navmenu li a.current {
     font-weight: bold; }
-  .navgoco li a:focus {
-    outline: #ff8c00 solid 3px !important;
-    background: none !important;
+  .navmenu li a:focus {
+    outline: #ff8c00 solid 2px !important;
     color: inherit !important; }
   @media (max-width: 767px) {
-    .navgoco li a {
+    .navmenu li a {
       font-size: 0.84em;
       line-height: 15px;
       padding-top: 16px;
       padding-bottom: 16px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .navgoco li a {
+    .navmenu li a {
       font-size: 0.89em;
       line-height: 16px;
       padding-top: 16px;
       padding-bottom: 16px; } }
 
-.navgoco > li > a {
+.navmenu > li > a {
   font-size: 1em;
   line-height: 18px;
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (max-width: 767px) {
-    .navgoco > li > a {
+    .navmenu > li > a {
       font-size: 0.84em;
       line-height: 15px;
       padding-top: 16px;
       padding-bottom: 16px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .navgoco > li > a {
+    .navmenu > li > a {
       font-size: 0.89em;
       line-height: 16px;
       padding-top: 16px;
       padding-bottom: 16px; } }
 
-.navgoco li:last-child, .navgoco li ul li:last-child {
+.navmenu li:last-child, .navmenu li ul li:last-child {
   border: none; }
 
-.navgoco ul li h4, .navgoco ul li .h4 {
+.navmenu ul li h4, .navmenu ul li .h4 {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -6571,35 +6575,40 @@ ul.navgoco {
   font-size: 1em;
   line-height: 18px; }
   @media (max-width: 767px) {
-    .navgoco ul li h4, .navgoco ul li .h4 {
+    .navmenu ul li h4, .navmenu ul li .h4 {
       font-size: 0.84em;
       line-height: 15px;
       padding-top: 16px;
       padding-bottom: 16px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .navgoco ul li h4, .navgoco ul li .h4 {
+    .navmenu ul li h4, .navmenu ul li .h4 {
       font-size: 0.89em;
       line-height: 16px;
       padding-top: 16px;
       padding-bottom: 16px; } }
 
-.navgoco li.open.active ul li a {
-  padding-left: 3em; }
+/*
+.navmenu li.open.active ul li a {
+  padding-left: 3em;
+}
 
-.navgoco li.open.active ul li.open a.active {
+.navmenu li.open.active ul li.open a.active {
   background-color: #cccccc;
-  border-bottom: 1px solid #ffffff; }
+  border-bottom: 1px solid #ffffff;
+}
 
-.navgoco li.open.active ul li.open.active ul li a {
-  padding-left: 6em; }
 
-.navgoco li li a {
+.navmenu li.open.active ul li.open.active ul li a {
+  padding-left: 6em;
+}
+*/
+.navmenu li li a {
   text-indent: 1em; }
 
-.navgoco li li li a {
+.navmenu li li li a {
   text-indent: 2em; }
 
-.navgoco li a span {
+.navmenu li a span {
   text-indent: 0; }
 
 /*
@@ -7014,9 +7023,6 @@ footer {
 
 [tabindex="0"]:focus {
   outline: none; }
-
-.navgoco [tabindex="0"]:focus {
-  outline: #ff8c00 solid 3px !important; }
 
 .container {
   min-width: 200px; }
