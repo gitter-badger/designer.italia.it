@@ -97,7 +97,7 @@
       return '#' + tohex(rgb[1]) + tohex(rgb[2]) + tohex(rgb[3]);
     };
 
-    $('ul.palette-example li').each(function () {
+    $('.palette-example > *').each(function () {
       var color = rgb2hex($(this).css('color'));
       $(this)
         .wrapInner('<span class="lg-color-example-text"></span>')
