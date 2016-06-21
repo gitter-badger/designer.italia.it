@@ -1,5 +1,7 @@
 # Linee guida visive siti web della Pubblica Amministrazione
 
+[![Join the chat at https://gitter.im/italia-it/designer.italia.it](https://badges.gitter.im/italia-it/designer.italia.it.svg)](https://gitter.im/italia-it/designer.italia.it?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Stato del progetto
 Attualmente il progetto redazionale delle Linee Guida è nella fase "alfa". I suggerimenti
 e le proposte della community contribuiranno a raggiungere una versione più stabile e di riferimento.
